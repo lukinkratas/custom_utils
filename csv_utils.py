@@ -8,7 +8,7 @@ def decode_to_df(encoded_df: bytes, **kwargs) -> pd.DataFrame:
 
 
 def encode_df(decoded_df: pd.DataFrame, **kwargs) -> bytes:
-    index = kwargs.get('index', False)
+    index = kwargs.pop('index', False)
     bytes = BytesIO()
     decoded_df.to_csv(bytes, index=index, **kwargs)
     bytes.seek(0)
