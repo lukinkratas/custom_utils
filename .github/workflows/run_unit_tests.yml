@@ -1,9 +1,9 @@
-name: Unit Test
+name: Run Unit Tests
 
 on: [push]
 
 jobs:
-  test:
+  run_unit_tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
