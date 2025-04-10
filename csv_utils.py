@@ -3,7 +3,7 @@ from io import BytesIO, StringIO
 import pandas as pd
 
 
-def decode_to_df(encoded_df: bytes, **kwargs) -> pd.DataFrame:
+def decode_to_df(encoded_df: bytes, **kwarg) -> pd.DataFrame:
     return pd.read_csv(StringIO(encoded_df.decode('utf-8')), **kwargs)
 
 

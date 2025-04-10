@@ -9,9 +9,6 @@ dependencies = [
     "pytest>=8.3.5",
 ]
 
-[tool.mypy]
-struct = true
-
 [tool.ruff]
 line-length = 88
 indent-width = 4
