@@ -5,8 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "boto3>=1.37.31",
     "pandas>=2.2.3",
-    "pytest>=8.3.5",
 ]
 
 [tool.ruff]
@@ -22,3 +22,10 @@ indent-style = "space"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
+
+[dependency-groups]
+dev = [
+    "pandas>=2.2.3",
+    "pytest>=8.3.5",
+    "ruff>=0.11.4",
+]
